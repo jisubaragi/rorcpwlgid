@@ -10,7 +10,7 @@ public class TypeEffect : MonoBehaviour
     public TextManager text;
     public GameObject MouseControll;
     public Animator AIpanel;
-
+    public Animator aiface;
     string targetMsg;       //표시할 문자열을 저장하는 변수
     Text msgText;
     int index;
@@ -27,6 +27,7 @@ public class TypeEffect : MonoBehaviour
 
     void EffectStart()
     {
+        aiface.SetTrigger("Doface");
         msgText.text = "";
         index = 0;
         EndCursor.SetActive(false);
